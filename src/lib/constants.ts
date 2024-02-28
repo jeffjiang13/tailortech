@@ -30,7 +30,7 @@ import Warning from '@/components/icons/warning'
 export const pricingCards = [
   {
     title: 'Starter',
-    description: 'Perfect for trying out plura',
+    description: 'Perfect for trying out TailorTech',
     price: 'Free',
     duration: '',
     highlight: 'Key features',
@@ -43,7 +43,7 @@ export const pricingCards = [
     price: '$199',
     duration: 'month',
     highlight: 'Key features',
-    features: ['Rebilling', '24/7 Support team'],
+    features: ['Rebilling', '24/7 Support team','Unlimited Sub accounts', 'Unlimited Team members', 'Unlimited pipelines'],
     priceId: 'price_1OmldcAW3q44BEc8jqJFzKht',
   },
   {
@@ -52,7 +52,7 @@ export const pricingCards = [
     price: '$49',
     duration: 'month',
     highlight: 'Everything in Starter, plus',
-    features: ['Unlimited Sub accounts', 'Unlimited Team members'],
+    features: ['Unlimited Sub accounts', 'Unlimited Team members', 'Unlimited pipelines'],
     priceId: 'price_1OmlclAW3q44BEc8sffDcyGj',
   },
 ]
