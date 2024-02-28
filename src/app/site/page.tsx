@@ -101,8 +101,8 @@ export default async function Home() {
                   className={clsx(
                     'w-full text-center bg-primary p-2 rounded-md hover:bg-primary/80',
                     {
-                      '!bg-muted-foreground':
-                        card.nickname !== 'Unlimited Saas',
+                      // '!bg-muted-foreground':
+                      //   card.nickname !== 'Unlimited Saas',
                     }
                   )}
                 >
