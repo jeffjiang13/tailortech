@@ -57,6 +57,8 @@ export default async function Home() {
               key={card.nickname}
               className={clsx('w-[300px] flex flex-col justify-between', {
                 'border-2 border-primary': card.nickname === 'Unlimited Saas',
+                'border-2 border-primary/80': card.nickname === 'Basic',
+
               })}
             >
               <CardHeader>
