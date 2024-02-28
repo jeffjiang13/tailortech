@@ -32,7 +32,7 @@ export default async function Home() {
             TailorTech
           </h1>
         </div>
-        <div className="flex justify-center items-center relative md:mt-[-70px]">
+        <div className="flex justify-center items-center relative md:mt-[-90px]">
           <Image
             src={'/assets/preview.png'}
             alt="banner image"
