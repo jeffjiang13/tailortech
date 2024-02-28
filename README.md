@@ -55,7 +55,7 @@ We welcome contributions! Please read our [contributing guidelines](CONTRIBUTING
 
 ## License
 
-This project is available for non-commercial use. Please contact us at Instagram @webprodigies to discuss licensing for commercial purposes.
+This project is available for non-commercial use. Please contact us at Instagram to discuss licensing for commercial purposes.
 
 ---
 
