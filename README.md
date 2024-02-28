@@ -60,4 +60,3 @@ This project is available for non-commercial use. Please contact us at Instagram
 ---
 
 © 2024 Jeff Jiang. All rights reserved.
-```
