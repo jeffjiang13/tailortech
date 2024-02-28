@@ -47,7 +47,7 @@ For detailed documentation on setup, features, and usage, visit [our documentati
 
 ## Support and Community
 
-Join our community for support, to report bugs, or to collaborate on future enhancements. Connect with us on Discord or follow us on Instagram @webprodigies.
+Join our community for support, to report bugs, or to collaborate on future enhancements. Connect with us on Discord or follow us on Instagram.
 
 ## Contributing
 
