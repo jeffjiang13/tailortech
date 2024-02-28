@@ -64,7 +64,7 @@ export default async function Home() {
               <CardHeader>
                 <CardTitle
                   className={clsx('', {
-                    'text-muted-foreground': card.nickname !== 'Unlimited Saas',
+                    // 'text-muted-foreground': card.nickname !== 'Unlimited Saas',
                   })}
                 >
                   {card.nickname}
@@ -117,7 +117,7 @@ export default async function Home() {
             <CardHeader>
               <CardTitle
                 className={clsx({
-                  'text-muted-foreground': true,
+                  // 'text-muted-foreground': true,
                 })}
               >
                 {pricingCards[0].title}
