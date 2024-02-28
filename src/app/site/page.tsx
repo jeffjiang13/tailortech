@@ -101,7 +101,7 @@ export default async function Home() {
                 <Link
                   href={`/agency?plan=${card.id}`}
                   className={clsx(
-                    'w-full text-center bg-primary p-2 rounded-md hover:bg-primary/80',
+                    'w-full text-center font-bold bg-primary p-2 rounded-md hover:bg-primary/80',
                     {
                       // '!bg-muted-foreground':
                       //   card.nickname !== 'Unlimited Saas',
@@ -145,7 +145,7 @@ export default async function Home() {
               <Link
                 href="/agency"
                 className={clsx(
-                  'w-full text-center bg-primary p-2 rounded-md hover:bg-primary/80',
+                  'w-full text-center font-bold bg-primary p-2 rounded-md hover:bg-primary/80',
                   {
                     // '!bg-muted-foreground': true,
                   }
