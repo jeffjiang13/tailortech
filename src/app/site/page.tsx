@@ -146,6 +146,7 @@ export default async function Home() {
                   'w-full text-center bg-primary p-2 rounded-md hover:bg-primary/80',
                   {
                     '!bg-muted-foreground': true,
+                    'hover:bg-primary/80': true,
                   }
                 )}
               >
