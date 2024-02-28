@@ -78,7 +78,7 @@ export default async function Home() {
               </CardHeader>
               <CardContent>
                 <span className="text-4xl font-bold">
-                  {card.unit_amount && card.unit_amount / 100}
+                  ${card.unit_amount && card.unit_amount / 100}
                 </span>
                 <span className="text-muted-foreground">
                   <span>/ {card.recurring?.interval}</span>
