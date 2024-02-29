@@ -27,9 +27,9 @@ const Navigation = ({ user }: Props) => {
       <aside className="flex gap-2 items-center">
         {/* Conditional rendering based on user's login status */}
         {!user ? (
-          <Link href={'/login'}><a className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">Login</a></Link>
+          <Link href={'/agency'}><a className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">Login</a></Link>
         ) : (
-          <Link href={'/dashboard'}><a className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">Dashboard</a></Link>
+          <Link href={'/agency'}><a className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">Dashboard</a></Link>
         )}
         <UserButton />
         <ModeToggle />
