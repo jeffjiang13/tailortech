@@ -22,7 +22,7 @@ const Sidebar = async ({ id, type }: Props) => {
   const isWhiteLabeledAgency = user.Agency.whiteLabel
   if (!details) return
 
-  let sideBarLogo = user.Agency.agencyLogo || '/assets/plura-logo.svg'
+  let sideBarLogo = user.Agency.agencyLogo || '/assets/code.png'
 
   if (!isWhiteLabeledAgency) {
     if (type === 'subaccount') {
