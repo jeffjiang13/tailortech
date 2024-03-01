@@ -19,27 +19,24 @@ const Navigation = ({ user }: Props) => {
           height={40}
           alt="logo"
         />
-        <span className="text-xl font-bold">TailorTech.</span>
+        <span className="text-xl font-bold"> TailorTech.</span>
       </aside>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
-        <ul className="flex items-center justify-center gap-8">
-          <Link href={'#'}><a className="font-bold">Pricing</a></Link>
-          <Link href={'#'}><a className="font-bold">About</a></Link>
-          <Link href={'#'}><a className="font-bold">Documentation</a></Link>
-          <Link href={'#'}><a className="font-bold">Features</a></Link>
+        <ul className="flex items-center justify-center gap-16">
+          <Link href={'#'}className="font-bold">Pricing</Link>
+          <Link href={'#'}className="font-bold">About</Link>
+          <Link href={'#'}className="font-bold">Documentation</Link>
+          <Link href={'#'}className="font-bold">Features</Link>
         </ul>
       </nav>
       <aside className="flex gap-2 items-center">
         {/* Conditional rendering based on user's login status */}
-        {user ? (
-          <Link href={'/agency'} className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">
-            Dashboard
-          </Link>
-        ) : (
-          <Link href={'/agency'} className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80">
-            Login
-          </Link>
-        )}
+        <Link
+          href={'/agency'}
+          className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
+        >
+          Login
+        </Link>
         <UserButton />
         <ModeToggle />
       </aside>

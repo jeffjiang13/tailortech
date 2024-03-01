@@ -215,7 +215,7 @@ const Page = async ({
             </CardHeader>
             <CardContent>
               <CircleProgress
-                value={closingRate}
+                value={closingRate? closingRate : 0}
                 description={
                   <>
                     {sessions && (

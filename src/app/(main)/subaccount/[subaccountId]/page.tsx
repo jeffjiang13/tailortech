@@ -183,7 +183,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
               <CardHeader>
                 <CardDescription>Conversions</CardDescription>
                 <CircleProgress
-                  value={closingRate}
+                  value={closingRate ? closingRate : 0}
                   description={
                     <>
                       {sessions && (
