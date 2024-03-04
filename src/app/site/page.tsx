@@ -38,7 +38,7 @@ export default async function Home() {
             alt="banner image"
             height={800}
             width={800}
-            className="rounded-tl-2xl rounded-tr-2xl border-2 border-muted"
+            className="rounded-tl-2xl rounded-2xl border-2 border-muted"
           />
           <div className="bottom-0 top-[50%] bg-gradient-to-t dark:from-background left-0 right-0 absolute z-10"></div>
         </div>
@@ -55,7 +55,7 @@ export default async function Home() {
             //WIP: Wire up free product from stripe
             <Card
               key={card.nickname}
-              className={clsx('w-[300px] flex flex-col justify-between', {
+              className={clsx('w-[300px] flex flex-col justify-between border-2 transition-all duration-300 transform hover:scale-105 hover:border-blue-200', {
                 'border-2 border-primary': card.nickname === 'Unlimited Saas',
                 'border-2 border-primary/50': card.nickname === 'Basic',
 
@@ -93,7 +93,7 @@ export default async function Home() {
                         key={feature}
                         className="flex gap-2"
                       >
-                        <Check />
+                        <Check className="text-blue-500" />
                         <p>{feature}</p>
                       </div>
                     ))}
@@ -113,7 +113,7 @@ export default async function Home() {
               </CardFooter>
             </Card>
           ))}
-          <Card className={clsx('w-[300px] flex flex-col justify-between')}>
+          <Card className={clsx('w-[300px] flex flex-col justify-between border-2 transition-all duration-300 transform hover:scale-105 hover:border-blue-200')}>
             <CardHeader>
               <CardTitle
                 className={clsx({
@@ -137,7 +137,7 @@ export default async function Home() {
                       key={feature}
                       className="flex gap-2"
                     >
-                      <Check />
+                      <Check className="text-blue-500" />
                       <p>{feature}</p>
                     </div>
                   ))}

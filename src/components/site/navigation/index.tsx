@@ -22,11 +22,11 @@ const Navigation = ({ user }: Props) => {
         <span className="text-xl font-bold"> TailorTech.</span>
       </aside>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
-        <ul className="flex items-center justify-center gap-16">
-          <Link href={'#'}className="font-bold">Pricing</Link>
-          <Link href={'#'}className="font-bold">About</Link>
-          <Link href={'#'}className="font-bold">Documentation</Link>
-          <Link href={'#'}className="font-bold">Features</Link>
+        <ul className="flex items-center justify-center gap-16 ">
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Pricing</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">About</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Documentation</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Features</Link>
         </ul>
       </nav>
       <aside className="flex gap-2 items-center">

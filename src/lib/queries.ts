@@ -361,7 +361,7 @@ export const upsertSubAccount = async (subAccount: SubAccount) => {
           {
             name: 'Automations',
             icon: 'chip',
-            link: `/subaccount/${subAccount.id}/funnels`, // was /automations
+            link: `/subaccount/${subAccount.id}/automations`,
           },
           {
             name: 'Pipelines',
