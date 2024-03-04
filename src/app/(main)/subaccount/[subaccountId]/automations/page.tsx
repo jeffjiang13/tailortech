@@ -13,8 +13,8 @@ const UnderConstructionPage = () => {
                 height={600}
                 className="rounded-tl-2xl rounded-2xl border-2 border-muted"
             />
-            <h1 className="text-2xl font-bold text-center mt-8">We're Building Something Exciting!</h1>
-            <p className="text-center mt-4">Our website is currently under construction. We'll be here soon with our new awesome site, subscribe to be notified.</p>
+            <h1 className="text-2xl font-bold text-center mt-8">{"We're Building Something Exciting!"}</h1>
+            <p className="text-center mt-4">{"Our website is currently under construction. We'll be here soon with our new awesome site, subscribe to be notified."}</p>
             <div className="mt-8">
                 <input
                     type="email"
