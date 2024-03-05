@@ -17,6 +17,7 @@ import { Card } from '../ui/card'
 import { Switch } from '../ui/switch'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import { ModeToggle } from './mode-toggle'
+import Link from 'next/link'
 
 type Props = {
   notifications: NotificationWithUser | []
@@ -51,6 +52,14 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
           className
         )}
       >
+              <nav className="hidden md:block absolute left-[37.2%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
+        <ul className="flex items-center justify-center gap-16 ">
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Pricing</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">About</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Documentation</Link>
+          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Features</Link>
+        </ul>
+      </nav>
         <div className="flex items-center gap-2 ml-auto">
           <UserButton afterSignOutUrl="/" />
           <Sheet>

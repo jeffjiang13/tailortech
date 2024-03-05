@@ -37,7 +37,7 @@ const layout = async ({ children, params }: Props) => {
   const notifications = await getNotificationAndUser(agencyId)
   if (notifications) allNoti = notifications
 
- 
+
 
   return (
     <div className="h-screen overflow-hidden">
