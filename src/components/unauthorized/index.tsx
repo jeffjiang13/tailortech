@@ -10,7 +10,7 @@ const Unauthorized = (props: Props) => {
       <p>Please contact support or your agency owner to get access</p>
       <Link
         href="/"
-        className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80"
+        className="bg-primary text-white p-2 px-4 rounded-md hover:bg-primary/80 mt-6"
       >
         Back to home
       </Link>

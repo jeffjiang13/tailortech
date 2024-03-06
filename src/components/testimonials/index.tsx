@@ -40,7 +40,7 @@ export const LandingContent = () => {
       <h2 className="text-center text-4xl font-extrabold mb-10">Testimonials</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {testimonials.map((item, index) => (
-          <Card key={index} className="border-2">
+          <Card key={index} className="border-2 shadow-lg shadow-blue-300">
             <CardHeader>
               <CardTitle className="flex items-center gap-x-2">
                 <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white text-xl mr-2">

@@ -12,6 +12,8 @@ type Props = {
 const Navigation = ({ user }: Props) => {
   return (
     <div className="fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10">
+              <Link href={'/'}>
+
       <aside className="flex items-center gap-2">
         <Image
           src={'/assets/code.png'}
@@ -21,12 +23,13 @@ const Navigation = ({ user }: Props) => {
         />
         <span className="text-xl font-bold"> TailorTech.</span>
       </aside>
+      </Link>
       <nav className="hidden md:block absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
         <ul className="flex items-center justify-center gap-16 ">
-          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Pricing</Link>
-          <Link href={'#'}className="font-bold hover:text-primary hover:underline">About</Link>
-          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Documentation</Link>
-          <Link href={'#'}className="font-bold hover:text-primary hover:underline">Features</Link>
+          <Link href={'/pricing'}className="font-bold hover:text-primary hover:underline">Pricing</Link>
+          <Link href={'/about'}className="font-bold hover:text-primary hover:underline">About</Link>
+          <Link href={'/documentation'}className="font-bold hover:text-primary hover:underline">Documentation</Link>
+          <Link href={'/features'}className="font-bold hover:text-primary hover:underline">Features</Link>
         </ul>
       </nav>
       <aside className="flex gap-2 items-center">

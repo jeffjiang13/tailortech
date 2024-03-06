@@ -33,7 +33,7 @@ export default async function Home() {
             TailorTech
           </h1>
         </div>
-        <div className="flex justify-center items-center relative md:mt-[-1px]">
+        <div className="flex justify-center items-center relative md:mt-[-1px] shadow-xl shadow-blue-500">
           <Image
             src={'/assets/preview.png'}
             alt="banner image"
@@ -45,7 +45,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
-        <h2 className="text-4xl text-center mt-20"> Choose your plan today!</h2>
+        <h2 className="text-4xl text-center mt-40"> Choose your plan today!</h2>
         <p className="text-muted-foreground text-center mb-8">
           Discover pricing plans designed with your requirements in mind.
           <br />
@@ -59,7 +59,6 @@ export default async function Home() {
               className={clsx('w-[300px] flex flex-col justify-between border-2 transition-all duration-300 transform hover:scale-105 hover:border-blue-200', {
                 'border-2 border-primary': card.nickname === 'Unlimited Saas',
                 'border-2 border-primary/50': card.nickname === 'Basic',
-
               })}
             >
               <CardHeader>

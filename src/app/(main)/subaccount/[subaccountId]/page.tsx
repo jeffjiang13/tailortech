@@ -134,7 +134,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
                 </CardDescription>
                 <Link
                   href={`/subaccount/${subaccountDetails.id}/launchpad`}
-                  className="p-2 w-fit bg-secondary text-white rounded-md flex items-center gap-2"
+                  className="p-2 w-fit bg-secondary text-white rounded-md flex items-center gap-2 hover: bg-blue-500"
                 >
                   <ClipboardIcon />
                   Launch Pad
