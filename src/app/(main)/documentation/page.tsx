@@ -17,6 +17,43 @@ const sections: Section[] = [
     id: 'getting-started',
   },
   {
+    title: 'TailorTech Overview',
+    content: `TailorTech is your go-to platform for SaaS Website Builder, Project Management, and Dashboard functionalities, equipped with Stripe for smooth payment processes. Here, you can manage your agency's and sub accounts' information seamlessly, toggle between light and dark themes, and leverage our detailed documentation for any assistance.`,
+    id: 'tailortech-overview',
+  },
+  {
+    title: 'Agency Information Management',
+    content: `Setting up your agency is the first step towards unlocking the full potential of TailorTech. Enter your agency's name, email, phone number, and address to get started. You also have the option to white-label your agency, presenting your brand's logo across all sub accounts. Remember, your agency's goals can evolve with your business, so set and update them as needed.`,
+    id: 'agency-information',
+  },
+  {
+    title: 'User Profile Setup',
+    content: `Your user profile is crucial for personalization and security. Add or update your profile picture, full name, email, and define your role within the agency. Ensuring this information is accurate and up-to-date helps in maintaining the integrity of your agency's operations.`,
+    id: 'user-profile-setup',
+  },
+  {
+    title: 'Sidebar Customization',
+    content: `The sidebar is your navigation hub, providing quick access to various sections of the platform. Customize it to fit your needs by adding or removing menu links, and ensure your agency's logo and address are visible for easy identification.`,
+    id: 'sidebar-customization',
+  },
+  {
+    title: 'Danger Zone - Agency Deletion',
+    content: `Be cautious when navigating to the Danger Zone. Deleting your agency is irreversible and results in the loss of all associated sub accounts, funnels, contacts, and other data. This action should only be considered as a last resort.`,
+    id: 'danger-zone',
+  },
+  {
+    title: 'Create a Subaccount',
+    content: `To set up a new subaccount on our platform, start by preparing an account logo by either choosing a file or dragging and dropping an image, ensuring it does not exceed the 4MB limit. Next, specify the subaccount's name, which could either be the client's company name or a project name, and provide a primary contact email for the account. This email will serve both communication and login purposes. Additionally, a contact phone number should be added for the subaccount.
+
+    The physical address of the subaccount's business is required, including the city, state or region, and the postal code, alongside the country of operation. These details are essential for creating a comprehensive profile for the subaccount. After filling in all necessary information, clicking on the "Save Account Information" button will finalize the creation of the subaccount. This process allows for efficient management of different clients or projects under a single agency umbrella, with the capability to switch between multiple subaccounts from the agency dashboard for effective management.`,
+    id: 'create-subaccount',
+  },
+  {
+    title: 'Invite or Add a Team Member',
+    content: `Before inviting or adding a member, the member must sign up for an account on our platform. This ensures that the invited member can seamlessly access the dashboard and begin contributing immediately upon accepting the invitation. Navigate to the 'Team' section of your dashboard and select 'Send an Invitation' to enter the prospective member's email address and assign their role within the team. It's important to ensure that the email address is correct, as the invitation and instructions for joining will be sent there.`,
+    id: 'invite-or-add-a-team-member',
+  },
+  {
     title: 'Integrating Stripe',
     content: `Learn how to integrate Stripe for payment processing with our platform. This section covers setup, configuration, and security best practices.`,
     id: 'integrating-stripe',
@@ -71,7 +108,6 @@ const sections: Section[] = [
     content: `Navigate the complexities of subscription management and billing. From setting up recurring payments to handling cancellations, learn everything you need.`,
     id: 'managing-subscriptions-billing',
   },
-  // New additions
   {
     title: 'Deploying Your Projects',
     content: `Go live with confidence. This section covers deployment best practices, domain setup, and how to monitor your live projects for any issues.`,
