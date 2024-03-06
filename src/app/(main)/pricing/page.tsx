@@ -25,8 +25,9 @@ export default async function Home() {
       <section className="flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
         <h2 className="text-4xl text-center mt-40"> Tailor Your Subscription</h2>
         <p className="text-muted-foreground text-center mb-8">
-        Explore our tailored subscription plans designed to fit the diverse needs of your business. <br/>
-        Whether you're just starting out or scaling up, we've got you covered.
+        Explore our tailored subscription plans designed to fit the diverse needs of your business.
+        <br/>
+        Whether you&apos;re just starting out or scaling up, we&apos;ve got you covered.
         </p>
         <div className="flex justify-center gap-4 flex-wrap mt-6 mb-10">
           {prices.data.map((card) => (
