@@ -1,9 +1,16 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
-import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
+import { ChevronRightIcon, ChevronDownIcon } from '@heroicons/react/24/solid';
 
-const sections = [
+interface Section {
+  title: string;
+  content: string;
+  id: string;
+}
+
+const sections: Section[] = [
+  // Your sections...
   {
     title: 'Getting Started',
     content: `Start by signing up for an account and configuring your workspace. Follow our step-by-step guide to get your first project off the ground.`,
@@ -87,7 +94,12 @@ const sections = [
   },
 ];
 
-const DocumentationSection = ({ title, content }) => {
+interface DocumentationSectionProps {
+  title: string;
+  content: string;
+}
+
+const DocumentationSection: React.FC<DocumentationSectionProps> = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
