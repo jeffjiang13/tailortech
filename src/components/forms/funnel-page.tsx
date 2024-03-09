@@ -95,6 +95,8 @@ const CreateFunnelPage: React.FC<CreateFunnelPageProps> = ({
         description: 'Saves Funnel Page Details',
       })
       router.refresh()
+      window.location.reload();
+
     } catch (error) {
       console.log(error)
       toast({
@@ -178,6 +180,8 @@ const CreateFunnelPage: React.FC<CreateFunnelPageProps> = ({
                       subaccountId: subaccountId,
                     })
                     router.refresh()
+                    window.location.reload();
+
                   }}
                 >
                   {form.formState.isSubmitting ? <Loading /> : <Trash />}
@@ -213,6 +217,8 @@ const CreateFunnelPage: React.FC<CreateFunnelPageProps> = ({
                       description: 'Saves Funnel Page Details',
                     })
                     router.refresh()
+                    window.location.reload();
+
                   }}
                 >
                   {form.formState.isSubmitting ? <Loading /> : <CopyPlusIcon />}
