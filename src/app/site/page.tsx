@@ -29,10 +29,11 @@ export default async function Home() {
 
         <p className="text-center font-bold text-xl mt-40">Manage Your Entire Agency from a Single, Unified Platform</p>
         <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
-          <h1 className="text-9xl font-bold text-center md:text-[200px]">
+          <h1 className="text-7xl sm:text-7xl md:text-9xl lg:text-[150px] xl:text-[200px] font-bold text-center">
             TailorTech
           </h1>
         </div>
+
         <div className="flex justify-center items-center relative md:mt-[-1px] shadow-xl shadow-blue-500">
           <Image
             src={'/assets/preview.png'}
