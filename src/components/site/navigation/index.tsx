@@ -40,10 +40,10 @@ const Navigation = ({ user }: Props) => {
       </nav>
 
       {/* Logo and TailorTech text hidden on mobile */}
-      <div className="md:flex hidden items-center gap-2">
+        <Link href={'/'} className="md:flex hidden items-center gap-2">
         <Image src={'/assets/code.png'} width={40} height={40} alt="logo" />
         <span className="text-xl font-bold">TailorTech.</span>
-      </div>
+        </Link>
 
       {/* Login and ModeToggle always visible */}
       <aside className="flex gap-2 items-center">
