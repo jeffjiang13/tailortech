@@ -31,7 +31,7 @@ const Navigation = ({ user }: Props) => {
 
       {/* Desktop Links */}
       <nav className="hidden md:flex absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
-        <ul className="flex items-center justify-center gap-16">
+        <ul className="flex items-center justify-center gap-12">
           <li><Link href="/pricing" className="font-bold hover:text-primary hover:underline">Pricing</Link></li>
           <li><Link href="/about" className="font-bold hover:text-primary hover:underline">About</Link></li>
           <li><Link href="/documentation" className="font-bold hover:text-primary hover:underline">Documentation</Link></li>
@@ -40,7 +40,7 @@ const Navigation = ({ user }: Props) => {
       </nav>
 
       {/* Logo and TailorTech text hidden on mobile */}
-        <Link href={'/'} className="md:flex hidden items-center gap-2">
+        <Link href={'/'} className="md:flex hidden items-center">
         <Image src={'/assets/code.webp'} width={40} height={40} alt="logo" />
         <span className="text-xl font-bold">TailorTech.</span>
         </Link>
