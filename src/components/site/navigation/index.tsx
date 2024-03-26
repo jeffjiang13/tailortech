@@ -41,7 +41,7 @@ const Navigation = ({ user }: Props) => {
 
       {/* Logo and TailorTech text hidden on mobile */}
         <Link href={'/'} className="md:flex hidden items-center gap-2">
-        <Image src={'/assets/code.png'} width={40} height={40} alt="logo" />
+        <Image src={'/assets/code.webp'} width={40} height={40} alt="logo" />
         <span className="text-xl font-bold">TailorTech.</span>
         </Link>
 

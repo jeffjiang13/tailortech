@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="text-center sm:text-left">
           <aside className="flex items-center gap-2 justify-center sm:justify-start mb-4 sm:mb-0">
             <Image
-              src={'/assets/code.png'}
+              src={'/assets/code.webp'}
               width={40}
               height={40}
               alt="logo"

@@ -1,30 +1,31 @@
 import React from 'react';
 import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from 'react-icons/fa';
+import Image from 'next/image'
 
 const teamMembers = [
   {
     name: 'Jeff Jiang',
     position: 'Founder & CEO',
-    bio: 'Jeff has over 20 years of experience in software engineering and leads our company with a vision to simplify technology for everyday use.',
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    twitter: 'https://twitter.com',
+    bio: 'Jeff has over 3 years of experience in software engineering and leads our company with a vision to simplify technology for everyday use.',
+    linkedin: "https://www.linkedin.com/in/jeffjiang13/",
+    github: "https://github.com/jeffjiang13",
+    twitter: "https://twitter.com/jeffjiang9"
   },
   {
-    name: 'Jeff Jiang',
-    position: 'Lead Designer',
-    bio: 'Jeff brings a decade of design experience, focusing on user experience and interface design to make our products beautiful and accessible.',
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    twitter: 'https://twitter.com',
+    name: "Jeff Jiang",
+    position: "Fullstack Developer",
+    bio: "Jeff brings years of development experience, focusing on building scalable web applications and integrating front-end technologies with server-side logic to create seamless user experiences.",
+    linkedin: "https://www.linkedin.com/in/jeffjiang13/",
+    github: "https://github.com/jeffjiang13",
+    twitter: "https://twitter.com/jeffjiang9"
   },
   {
     name: 'Jeff Jiang',
     position: 'Web Developer',
     bio: 'Jeff specializes in front-end development, ensuring our website and web applications run smoothly and efficiently.',
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    twitter: 'https://twitter.com',
+    linkedin: "https://www.linkedin.com/in/jeffjiang13/",
+    github: "https://github.com/jeffjiang13",
+    twitter: "https://twitter.com/jeffjiang9"
   },
 ];
 
@@ -32,7 +33,15 @@ const About = () => {
   return (
     <div className="max-w-screen-lg mx-auto px-4 py-8">
       <section className="mb-10 mt-20">
-        <h2 className="text-3xl font-bold text-center mb-4">About Us</h2>
+        <h2 className="text-3xl font-bold text-center">About Us</h2>
+        <div className="flex justify-center items-center">
+          <Image
+              src={'/assets/code.webp'}
+              width={200}
+              height={200}
+              alt="logo"
+          />
+        </div>
         <p className="text-lg text-center">TailorTech is dedicated to developing intuitive software that improves productivity and enhances the digital experience for users worldwide. Our mission is to create tools that empower individuals and businesses to achieve more every day.</p>
       </section>
 
@@ -48,7 +57,7 @@ const About = () => {
                 <a href={member.linkedin} className="text-blue-600 hover:text-blue-800 mr-2">
                   <FaLinkedin size={24} />
                 </a>
-                <a href={member.github} className="text-black hover:text-gray-800 mr-2">
+                <a href={member.github} className=" hover:text-gray-500 mr-2">
                   <FaGithubSquare size={24} />
                 </a>
                 <a href={member.twitter} className="text-blue-400 hover:text-blue-600">
