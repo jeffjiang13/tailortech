@@ -52,8 +52,8 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
           className
         )}
       >
-              <nav className="hidden md:block absolute left-[37.2%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
-        <ul className="flex items-center justify-center gap-16 ">
+              <nav className="hidden lg:flex absolute left-[37.2%] top-[50%] transform translate-x-[-50%] translate-y-[-50%]">
+        <ul className="flex items-center justify-center gap-12 ">
           <Link href={'/pricing'}className="font-bold hover:text-primary hover:underline">Pricing</Link>
           <Link href={'/about'}className="font-bold hover:text-primary hover:underline">About</Link>
           <Link href={'/documentation'}className="font-bold hover:text-primary hover:underline">Documentation</Link>
