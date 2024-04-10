@@ -25,38 +25,42 @@ import { Copy, MoreHorizontal, Trash } from 'lucide-react'
 import Image from 'next/image'
 import { deleteMedia, saveActivityLogsNotification } from '@/lib/queries'
 import { toast } from '../ui/use-toast'
+import ImageModal from './image-modal'
 
-type Props = { file: Media }
+type Props = {
+  file: Media
+}
 
 const MediaCard = ({ file }: Props) => {
   const [loading, setLoading] = useState(false)
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
   const router = useRouter()
+
+  const openImageModal = () => {
+    setIsImageModalOpen(true)
+  }
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false)
+  }
 
   return (
     <AlertDialog>
       <DropdownMenu>
         <article className="border w-full rounded-lg bg-slate-900">
-          <div className="relative w-full h-40">
-            <Image
-              src={file.link}
-              alt="preview image"
-              fill
-              className="object-cover rounded-lg"
-            />
+          <div className="relative w-full h-40 cursor-pointer" onClick={openImageModal}>
+            <Image src={file.link} alt="preview image" fill className="object-cover rounded-lg" />
           </div>
           <p className="opacity-0 h-0 w-0">{file.name}</p>
           <div className="p-4 relative">
-            <p className="text-muted-foreground">
-              {file.createdAt.toDateString()}
-            </p>
+            <p className="text-muted-foreground">{file.createdAt.toDateString()}</p>
             <p>{file.name}</p>
-            <div className="absolute top-4 right-4 p-[1px] cursor-pointer ">
+            <div className="absolute top-4 right-4 p-[1px] cursor-pointer">
               <DropdownMenuTrigger>
                 <MoreHorizontal />
               </DropdownMenuTrigger>
             </div>
           </div>
-
           <DropdownMenuContent>
             <DropdownMenuLabel>Menu</DropdownMenuLabel>
             <DropdownMenuSeparator />
@@ -79,12 +83,10 @@ const MediaCard = ({ file }: Props) => {
       </DropdownMenu>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-left">
-            Are you absolutely sure?
-          </AlertDialogTitle>
+          <AlertDialogTitle className="text-left">Are you absolutely sure?</AlertDialogTitle>
           <AlertDialogDescription className="text-left">
-            Are you sure you want to delete this file? All subaccount using this
-            file will no longer have access to it!
+            Are you sure you want to delete this file? All subaccount using this file will no longer
+            have access to it!
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex items-center">
@@ -100,10 +102,7 @@ const MediaCard = ({ file }: Props) => {
                 description: `Deleted a media file | ${response?.name}`,
                 subaccountId: response.subAccountId,
               })
-              toast({
-                title: 'Deleted File',
-                description: 'Successfully deleted the file',
-              })
+              toast({ title: 'Deleted File', description: 'Successfully deleted the file' })
               setLoading(false)
               router.refresh()
             }}
@@ -112,6 +111,12 @@ const MediaCard = ({ file }: Props) => {
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
+      <ImageModal
+        imageUrl={file.link}
+        alt={file.name}
+        isOpen={isImageModalOpen}
+        onClose={closeImageModal}
+      />
     </AlertDialog>
   )
 }

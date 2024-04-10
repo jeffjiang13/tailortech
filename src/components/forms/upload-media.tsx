@@ -27,6 +27,8 @@ import { Button } from '../ui/button'
 
 type Props = {
   subaccountId: string
+  onClose: () => void; // Add this line
+
 }
 
 const formSchema = z.object({
@@ -34,7 +36,7 @@ const formSchema = z.object({
   name: z.string().min(1, { message: 'Name is required' }),
 })
 
-const UploadMediaForm = ({ subaccountId }: Props) => {
+const UploadMediaForm = ({ subaccountId, onClose }: Props) => {
   const { toast } = useToast()
   const router = useRouter()
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,7 +57,8 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
         subaccountId,
       })
 
-      toast({ title: 'Succes', description: 'Uploaded media' })
+      toast({ title: 'Success', description: 'Uploaded media' })
+      onClose(); // Close the modal here
       router.refresh()
     } catch (error) {
       console.log(error)
@@ -94,13 +97,13 @@ const UploadMediaForm = ({ subaccountId }: Props) => {
                 </FormItem>
               )}
             />
-
+            <br />
             <FormField
               control={form.control}
               name="link"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Media File</FormLabel>
+                  <FormLabel >Media File</FormLabel>
                   <FormControl>
                     <FileUpload
                       apiEndpoint="subaccountLogo"

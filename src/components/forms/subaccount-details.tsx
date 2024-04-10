@@ -168,11 +168,11 @@ const SubAccountDetails: React.FC<SubAccountDetailsProps> = ({
                 name="name"
                 render={({ field }) => (
                   <FormItem className="flex-1">
-                    <FormLabel>Account Name</FormLabel>
+                    <FormLabel>Subaccount Name</FormLabel>
                     <FormControl>
                       <Input
                         required
-                        placeholder="Your agency name"
+                        placeholder="Your subaccount agency name"
                         {...field}
                       />
                     </FormControl>

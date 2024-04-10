@@ -81,8 +81,8 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
               </CardDescription>
             </CardHeader>
             <CardContent className="flex flex-col gap-4">
-              <div className="flex justify-between items-center w-full h-20 border p-4 rounded-lg ">
-                <div className="flex items-center gap-4">
+             <div className="flex justify-between items-center w-full border p-4 rounded-lg gap-2">
+                <div className="flex md:items-center gap-4 flex-col md:!flex-row">
                   <Image
                     src="/appstore.png"
                     alt="App logo"
@@ -90,12 +90,12 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
                     width={80}
                     className="rounded-md object-contain"
                   />
-                  <p>Save the website as a shortcut on your mobile devide</p>
+                  <p>Save the website as a shortcut on your mobile device</p>
                 </div>
                 <Button>Start</Button>
               </div>
-              <div className="flex justify-between items-center w-full h-20 border p-4 rounded-lg">
-                <div className="flex items-center gap-4">
+              <div className="flex justify-between items-center w-full border p-4 rounded-lg gap-2">
+                <div className="flex md:items-center gap-4 flex-col md:!flex-row">
                   <Image
                     src="/stripelogo.png"
                     alt="App logo"
@@ -123,8 +123,8 @@ const LaunchPad = async ({ params, searchParams }: Props) => {
                   </Link>
                 )}
               </div>
-              <div className="flex justify-between items-center w-full h-20 border p-4 rounded-lg">
-                <div className="flex items-center gap-4">
+              <div className="flex justify-between items-center w-full border p-4 rounded-lg gap-2">
+              <div className="flex md:items-center gap-4 flex-col md:!flex-row">
                   <Image
                     src={subaccountDetails.subAccountLogo}
                     alt="App logo"
