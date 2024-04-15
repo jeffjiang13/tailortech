@@ -69,7 +69,7 @@ const Checkout = (props: Props) => {
           )
           const responseJson = await response.json()
           console.log(responseJson)
-          if (!responseJson) throw new Error('somethign went wrong')
+          if (!responseJson) throw new Error('something went wrong')
           if (responseJson.error) {
             throw new Error(responseJson.error)
           }

@@ -3,14 +3,29 @@ import { ModeToggle } from "@/components/global/mode-toggle";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <div className="fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10 shadow-sm">
+    <div className={`fixed top-0 right-0 left-0 p-4 flex items-center justify-between z-10 shadow-sm ${scrolled ? "backdrop-blur-sm" : "bg-transparent"}`}>
       {/* Hamburger Menu for Mobile */}
       <div
         className="md:hidden z-20"

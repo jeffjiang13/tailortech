@@ -44,7 +44,7 @@ const AllSubaccountsPage = async ({ params }: Props) => {
           className="w-[200px] self-end m-6"
         />
         <Command className="rounded-lg bg-transparent">
-          <CommandInput placeholder="Search Account..." />
+          <CommandInput placeholder="Search..." />
           <CommandList>
             <CommandEmpty>No Results Found.</CommandEmpty>
             <CommandGroup heading="Sub Accounts">
@@ -79,7 +79,7 @@ const AllSubaccountsPage = async ({ params }: Props) => {
                       <Button
                         size={'sm'}
                         variant={'destructive'}
-                        className="w-20 hover:bg-red-600 hover:text-white !text-white"
+                        className="w-20 hover:bg-red-800 hover:text-white !text-white"
                       >
                         Delete
                       </Button>
@@ -87,10 +87,10 @@ const AllSubaccountsPage = async ({ params }: Props) => {
                     <AlertDialogContent>
                       <AlertDialogHeader>
                         <AlertDialogTitle className="text-left">
-                          Are your absolutely sure
+                          Are your absolutely sure?
                         </AlertDialogTitle>
                         <AlertDescription className="text-left">
-                          This action cannot be undon. This will delete the
+                          This action cannot be undone. This will delete the
                           subaccount and all data related to the subaccount.
                         </AlertDescription>
                       </AlertDialogHeader>
