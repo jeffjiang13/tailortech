@@ -66,7 +66,7 @@ const FunnelEditorSidebar = ({ subaccountId }: Props) => {
               <MediaBucketTab subaccountId={subaccountId} />
             </TabsContent>
             <TabsContent value="Layers">
-                <LayersTab subaccountId={subaccountId} />
+                <LayersTab />
               </TabsContent>
             <TabsContent value="Components">
               <SheetHeader className="text-left p-6 ">
