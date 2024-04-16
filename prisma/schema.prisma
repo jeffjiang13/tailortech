@@ -131,6 +131,8 @@ model SubAccount {
   Pipeline         Pipeline[]
   Tags             Tag[]
   Notification     Notification[]
+  Layers       Layer[]  // This assumes one SubAccount can have multiple Layers
+
 
   @@index([agencyId])
 }
@@ -283,6 +285,19 @@ model Media {
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
   Subaccount   SubAccount @relation(fields: [subAccountId], references: [id], onDelete: Cascade)
+
+  @@index([subAccountId])
+}
+model Layer {
+  id            String    @id @default(uuid())
+  name          String
+  description   String?
+  visibility    Boolean   @default(true)
+  zIndex        Int       @default(0)
+  subAccountId  String
+  SubAccount    SubAccount @relation(fields: [subAccountId], references: [id], onDelete: Cascade)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
 
   @@index([subAccountId])
 }

@@ -95,6 +95,29 @@ const SettingsTab = (props: Props) => {
       >
         <AccordionTrigger className="!no-underline">Custom</AccordionTrigger>
         <AccordionContent>
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col">
+              <Label className="text-muted-foreground mb-4">Custom Property</Label>
+              <Input
+                id="customProperty"
+                placeholder="Enter a value"
+                onChange={handleOnChanges}
+                //@ts-ignore
+                value={state.editor.selectedElement.customProperty || ''}
+              />
+            </div>
+            <div className="flex flex-col">
+              <Label className="text-muted-foreground mb-4">Background Color</Label>
+              <Input
+                type="color"
+                id="backgroundColor"
+                onChange={handleOnChanges}
+                value={state.editor.selectedElement.styles.backgroundColor || '#ffffff'}
+              />
+            </div>
+          </div>
+        </AccordionContent>
+        <AccordionContent>
           {state.editor.selectedElement.type === 'link' &&
             !Array.isArray(state.editor.selectedElement.content) && (
               <div className="flex flex-col gap-2">
