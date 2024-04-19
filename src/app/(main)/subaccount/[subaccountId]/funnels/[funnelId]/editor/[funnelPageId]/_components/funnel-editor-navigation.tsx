@@ -149,7 +149,7 @@ const FunnelEditorNavigation = ({
               })
             }}
           >
-            <TabsList className="grid w-full grid-cols-3 bg-transparent h-fit">
+            <TabsList className="hidden md:grid w-full grid-cols-3 bg-transparent h-fit">
               <Tooltip>
                 <TooltipTrigger>
                   <TabsTrigger
@@ -221,7 +221,7 @@ const FunnelEditorNavigation = ({
           >
             <Redo2 />
           </Button>
-          <div className="flex flex-col item-center mr-4">
+          <div className="hidden md:flex flex-col items-center mr-4">
             <div className="flex flex-row items-center gap-4">
               Draft
               <Switch
