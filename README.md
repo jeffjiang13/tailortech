@@ -1,4 +1,13 @@
+<div align="center" id="top" className="mb-10">
+<img src="./public/assets/code.webp" alt="icon" width="150" height="150" />
 
+&#xa0;
+
+  <img src="./public/assets/preview2.png" alt="preview" />
+
+<a href="https://jj-tailortech.vercel.app/">Demo</a>
+
+</div>
 # SaaS Website Builder, Project Management, and Dashboard with Stripe
 
 This comprehensive SaaS platform leverages the latest technologies including Next.js 14, Bun, Stripe Connect, Prisma, MySQL, and Tailwind to offer a robust solution for building websites, managing projects, and handling financial transactions seamlessly. Designed for agencies, freelancers, and businesses, our platform simplifies the digital landscape through an intuitive interface and powerful features.
