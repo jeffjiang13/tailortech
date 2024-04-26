@@ -57,7 +57,17 @@ const Page = async ({
     const response = await stripe.accounts.retrieve({
       stripeAccount: agencyDetails.connectAccountId,
     })
-
+    const formatDate = (timestamp: number): string => {
+      const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true };
+      return new Intl.DateTimeFormat('en-US', options).format(new Date(timestamp * 1000));
+    }
     currency = response.default_currency?.toUpperCase() || 'USD'
     const checkoutSessions = await stripe.checkout.sessions.list(
       {
@@ -67,21 +77,23 @@ const Page = async ({
       { stripeAccount: agencyDetails.connectAccountId }
     )
     sessions = checkoutSessions.data
-    totalClosedSessions = checkoutSessions.data
-      .filter((session) => session.status === 'complete')
-      .map((session) => ({
-        ...session,
-        created: new Date(session.created).toLocaleDateString(),
-        amount_total: session.amount_total ? session.amount_total / 100 : 0,
-      }))
+  // When processing sessions
+  totalClosedSessions = checkoutSessions.data
+    .filter(session => session.status === 'complete')
+    .map(session => ({
+      ...session,
+      created: formatDate(session.created),
+      amount_total: session.amount_total ? session.amount_total / 100 : 0
+    }));
 
-    totalPendingSessions = checkoutSessions.data
-      .filter((session) => session.status === 'open')
-      .map((session) => ({
-        ...session,
-        created: new Date(session.created).toLocaleDateString(),
-        amount_total: session.amount_total ? session.amount_total / 100 : 0,
-      }))
+  totalPendingSessions = checkoutSessions.data
+    .filter(session => session.status === 'open')
+    .map(session => ({
+      ...session,
+      created: formatDate(session.created),
+      amount_total: session.amount_total ? session.amount_total / 100 : 0
+    }));
+
     net = +totalClosedSessions
       .reduce((total, session) => total + (session.amount_total || 0), 0)
       .toFixed(2)
@@ -205,7 +217,7 @@ const Page = async ({
               index="created"
               categories={['amount_total']}
               colors={['primary']}
-              yAxisWidth={30}
+              yAxisWidth={45}
               showAnimation={true}
             />
           </Card>
