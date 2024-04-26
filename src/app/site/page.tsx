@@ -40,7 +40,7 @@ export default async function Home() {
             alt="banner image"
             height={1000}
             width={1000}
-            className="rounded-2xl border-2 border-muted"
+            className="rounded-2xl border-2 border-muted transition-all duration-300 transform hover:scale-110"
           />
           <div className="bottom-0 bg-gradient-to-t dark:from-background left-0 right-0 absolute z-10"></div>
         </div>
