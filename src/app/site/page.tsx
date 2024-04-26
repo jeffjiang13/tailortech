@@ -25,7 +25,7 @@ export default async function Home() {
       <section className="h-full w-full md:pt-44 mt-[-70px] relative flex items-center justify-center flex-col ">
         {/* grid */}
 
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#134bf2_1px,transparent_2px),linear-gradient(to_bottom,#134bf2_2px,transparent_1px)] bg-[size:6rem_6rem] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#6387f2_1px,transparent_1px),linear-gradient(to_bottom,#6387f2_1px,transparent_1px)] bg-[size:1rem_1rem] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
 
         <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
           <h1 className="text-7xl sm:text-7xl md:text-9xl lg:text-[150px] xl:text-[200px] font-bold text-center mt-48">
