@@ -66,29 +66,41 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
         stripeAccount: subaccountDetails.connectAccountId,
       }
     )
+
+    const formatDate = (timestamp: number): string => {
+      const options: Intl.DateTimeFormatOptions = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true };
+      return new Intl.DateTimeFormat('en-US', options).format(new Date(timestamp * 1000));
+    }
+
     sessions = checkoutSessions.data.map((session) => ({
       ...session,
-      created: new Date(session.created).toLocaleDateString(),
+      created: formatDate(session.created),
       amount_total: session.amount_total ? session.amount_total / 100 : 0,
-    }))
+    }));
 
     totalClosedSessions = checkoutSessions.data
       .filter((session) => session.status === 'complete')
       .map((session) => ({
         ...session,
-        created: new Date(session.created).toLocaleDateString(),
+        created: formatDate(session.created),
         amount_total: session.amount_total ? session.amount_total / 100 : 0,
-      }))
+      }));
 
     totalPendingSessions = checkoutSessions.data
-      .filter(
-        (session) => session.status === 'open' || session.status === 'expired'
-      )
+      .filter((session) => session.status === 'open' || session.status === 'expired')
       .map((session) => ({
         ...session,
-        created: new Date(session.created).toLocaleDateString(),
+        created: formatDate(session.created),
         amount_total: session.amount_total ? session.amount_total / 100 : 0,
-      }))
+      }));
+
 
     net = +totalClosedSessions
       .reduce((total, session) => total + (session.amount_total || 0), 0)
@@ -231,11 +243,11 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
               </CardHeader>
               <AreaChart
                 className="text-sm stroke-primary"
-                data={sessions || []}
+                data={sessions ? [...sessions].sort((a, b) => new Date(a.created).getTime() - new Date(b.created).getTime()) : []}
                 index="created"
                 categories={['amount_total']}
                 colors={['primary']}
-                yAxisWidth={30}
+                yAxisWidth={45}
                 showAnimation={true}
               />
             </Card>
@@ -251,7 +263,7 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
                     isIncreasePositive={true}
                     size="xs"
                   >
-                    +12.3%
+                    +14.3%
                   </BadgeDelta>
                 </CardTitle>
                 <Table>
@@ -276,9 +288,8 @@ const SubaccountPageId = async ({ params, searchParams }: Props) => {
                               </Badge>
                             </TableCell>
                             <TableCell>
-                              {new Date(session.created).toUTCString()}
+                              {session.created}
                             </TableCell>
-
                             <TableCell className="text-right">
                               <small>{currency}</small>{' '}
                               <span className="text-emerald-500">

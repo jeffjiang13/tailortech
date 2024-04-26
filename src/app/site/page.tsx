@@ -25,21 +25,21 @@ export default async function Home() {
       <section className="h-full w-full md:pt-44 mt-[-70px] relative flex items-center justify-center flex-col ">
         {/* grid */}
 
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#134bf2_1px,transparent_2px),linear-gradient(to_bottom,#134bf2_2px,transparent_1px)] bg-[size:6rem_6rem] [mask-image:radial-gradient(ellipse_70%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10" />
 
-        <p className="text-center font-bold text-xl mt-40">Manage Your Entire Agency from a Single, Unified Platform</p>
         <div className="bg-gradient-to-r from-primary to-secondary-foreground text-transparent bg-clip-text relative">
-          <h1 className="text-7xl sm:text-7xl md:text-9xl lg:text-[150px] xl:text-[200px] font-bold text-center">
+          <h1 className="text-7xl sm:text-7xl md:text-9xl lg:text-[150px] xl:text-[200px] font-bold text-center mt-48">
             TailorTech
           </h1>
         </div>
+        <p className="text-center font-bold text-lg">Manage Your Entire Agency from a Single, Unified Platform</p>
 
         <div className="flex justify-center items-center relative md:mt-[-1px] shadow-xl shadow-blue-500 rounded-2xl">
           <Image
-            src={'/assets/preview.png'}
+            src={'/assets/preview2.png'}
             alt="banner image"
-            height={800}
-            width={800}
+            height={1000}
+            width={1000}
             className="rounded-2xl border-2 border-muted"
           />
           <div className="bottom-0 bg-gradient-to-t dark:from-background left-0 right-0 absolute z-10"></div>
