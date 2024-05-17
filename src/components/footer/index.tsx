@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 const Footer = () => {
   return (
-    <footer className="w-full py-6 mb-20 mt-20 border-2">
-      <div className="max-w-screen-lg mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+    <footer className="w-full py-6 mb-20 mt-20 border-t">
+      <div className="max-w-screen-xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
         <div className="text-center sm:text-left">
           <aside className="flex items-center gap-2 justify-center sm:justify-start mb-4 sm:mb-0">
             <Image
