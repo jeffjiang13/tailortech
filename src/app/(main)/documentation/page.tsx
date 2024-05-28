@@ -10,7 +10,6 @@ interface Section {
 }
 
 const sections: Section[] = [
-  // Your sections...
   {
     title: 'Getting Started',
     content: `Start by signing up for an account and configuring your workspace. Follow our step-by-step guide to get your first project off the ground.`,
@@ -139,7 +138,7 @@ const DocumentationSection: React.FC<DocumentationSectionProps> = ({ title, cont
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border">
       <button
         className="flex justify-between items-center w-full py-4 text-left"
         onClick={() => setIsOpen(!isOpen)}
@@ -158,14 +157,14 @@ const DocumentationSection: React.FC<DocumentationSectionProps> = ({ title, cont
 
 const Documentation = () => {
   return (
-    <div className="min-h-screen mt-20 text-center">
+    <div className="banner min-h-screen mt-20 text-center">
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-extrabold">Documentation</h1>
         <p className="mt-2 text-lg">
           Everything you need to know to get started and make the most out of our platform.
         </p>
         <div className="mt-6 shadow overflow-hidden rounded-md">
-          <ul className="divide-y divide-gray-200 border-2 rounded-md">
+          <ul className="divide-y border-2 dark:divide-blue-500 dark:border-blue-500 rounded-md">
             {sections.map((section) => (
               <DocumentationSection key={section.id} {...section} />
             ))}

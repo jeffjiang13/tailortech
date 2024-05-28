@@ -22,7 +22,7 @@ export default async function Home() {
   return (
     <>
 
-      <section className="flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
+      <section className="banner flex justify-center items-center flex-col gap-4 md:!mt-20 mt-[-60px]">
         <h2 className="text-4xl text-center mt-40"> Tailor Your Subscription</h2>
         <p className="text-muted-foreground text-center mb-8">
         Explore our tailored subscription plans designed to fit the diverse needs of your business.

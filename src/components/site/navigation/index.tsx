@@ -107,7 +107,7 @@ const Navigation = () => {
       {/* Logo and TailorTech text hidden on mobile */}
       <Link href={"/"} className="md:flex hidden items-center">
         <Image src={"/assets/code.webp"} width={40} height={40} alt="logo" />
-        <span className="text-xl font-bold">TailorTech.</span>
+        <span className="text-xl font-bold">Tailor<span className='text-blue-500'>Tech</span></span>
       </Link>
 
       {/* Login and ModeToggle always visible */}

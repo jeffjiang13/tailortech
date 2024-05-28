@@ -31,7 +31,7 @@ const teamMembers = [
 
 const About = () => {
   return (
-    <div className="max-w-screen-lg mx-auto px-4 py-8">
+    <div className="banner max-w-screen-lg mx-auto px-4 py-8">
       <section className="mb-10 mt-20">
         <h2 className="text-3xl font-bold text-center">About Us</h2>
         <div className="flex justify-center items-center">
@@ -49,7 +49,7 @@ const About = () => {
         <h3 className="text-2xl font-bold mb-4">Our Team</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {teamMembers.map((member, index) => (
-            <div key={index} className="shadow-2xl shadow-blue-500 rounded-lg p-6">
+            <div key={index} className="shadow-lg shadow-blue-500 rounded-lg p-6 transition-all duration-300 transform hover:scale-105 hover:border-blue-200">
               <h4 className="text-xl font-bold mb-2">{member.name}</h4>
               <p className="text-sm text-gray-500 mb-4">{member.position}</p>
               <p className="text-sm mb-4">{member.bio}</p>

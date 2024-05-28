@@ -5,6 +5,8 @@
 html,
 body {
   height: 100vh;
+  overflow-x: clip;
+
 }
 
 *,
@@ -118,4 +120,47 @@ B (255 */
     opacity: 1;
     transform: scale(1);
   }
+}
+.banner {
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+     .banner{
+      min-height: unset!important;
+     }
+     .banner::before,
+     .banner::after {
+      display: none;
+     }
+}
+.banner::before {
+  position: absolute;
+  top: 0px;
+  left: -150px;
+  content: "";
+  width: 500px;
+  height: 500px;
+  min-height: 300px;
+  border-radius: 50%;
+  background: #80bdff;
+  filter: blur(227px);
+  z-index: -1;
+}
+.banner::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -100px;
+  content: "";
+  width: 430px;
+  height: 430px;
+  min-height: 300px;
+  border-radius: 50%;
+  background: #80bdff;
+  filter: blur(272px);
+  z-index: -1;
 }
