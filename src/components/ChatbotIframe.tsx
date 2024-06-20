@@ -26,7 +26,7 @@ const ChatbotIframe = () => {
     document.body.appendChild(iframe);
 
     const handleMessage = (e: MessageEvent) => {
-      if (e.origin !== "https://jj-smartrep.vercel.app") return;
+      if (e.origin !== "https://jj-smartrep.vercel.app") return null;
       try {
         const dimensions = JSON.parse(e.data);
         iframe.style.width = dimensions.width + 'px';
