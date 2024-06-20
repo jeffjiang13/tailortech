@@ -21,12 +21,12 @@ const ChatbotIframe = () => {
       }
     `);
 
-    iframe.src = "https://tailortech.vercel.app/chatbot";
+    iframe.src = "https://jj-smartrep.vercel.app/chatbot";
     iframe.classList.add('chat-frame');
     document.body.appendChild(iframe);
 
     const handleMessage = (e: MessageEvent) => {
-      if (e.origin !== "https://tailortech.vercel.app") return;
+      if (e.origin !== "https://jj-smartrep.vercel.app") return;
       try {
         const dimensions = JSON.parse(e.data);
         iframe.style.width = dimensions.width + 'px';
@@ -34,7 +34,7 @@ const ChatbotIframe = () => {
       } catch (error) {
         console.error('Invalid message data:', e.data);
       }
-      iframe.contentWindow?.postMessage("0283db25-13b7-4f61-b52a-e239eed2f298", "https://tailortech.vercel.app/");
+      iframe.contentWindow?.postMessage("0283db25-13b7-4f61-b52a-e239eed2f298", "https://jj-smartrep.vercel.app/");
     };
 
     window.addEventListener("message", handleMessage);
